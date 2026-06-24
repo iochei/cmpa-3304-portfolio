@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bradley Ochei - Personal Introduction</title>
+</head>
+<body>
+
+    <h1>Bradley Ochei</h1>
+    <h2>Student & Aspiring Web Developer</h2>
+
+    <p>My primary goal for this course is to build a strong foundation in web development, specifically mastering semantic HTML and understanding how content is structured for the web.</p>
+    <p>In my career, I aim to leverage these technical skills to build accessible and user-friendly digital experiences that solve real-world problems.</p>
+
+    <h3>My Hobbies & Interests</h3>
+    <ul>
+        <li>Exploring early 2000s web design and history</li>
+        <li>Building new projects and experimenting with code</li>
+        <li>Learning about modern software development workflows</li>
+    </ul>
+
+    <p>Visit my GitHub profile: <a href="https://github.com/iochei">github.com/iochei</a></p>
+
+</body>
+</html>
