@@ -1,0 +1,112 @@
+/* --- CSS/STYLE.CSS --- */
+
+/* General Reset & Basic Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- NAVIGATION PATTERN 1: .nav-horizontal (Flexbox, Dark Theme, Customized) --- */
+.nav-horizontal ul {
+    display: flex; /* Creates the horizontal layout */
+    justify-content: space-around; /* Distribute items evenly */
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem;
+    background-color: #333; /* Dark Gray background */
+}
+
+.nav-horizontal li a {
+    text-decoration: none;
+    color: #f4f4f4; /* Light Gray text */
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Hover effect for .nav-horizontal */
+.nav-horizontal li a:hover {
+    color: #ffcc00; /* Yellow text on hover */
+    border-bottom: 2px solid #ffcc00; /* Add underline on hover */
+}
+
+
+/* --- NAVIGATION PATTERN 2: .nav-simple (Vertical List, Customized) --- */
+.nav-simple ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem auto;
+    width: 200px; /* Set a width for the vertical nav */
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.nav-simple li a {
+    display: block; /* Makes the whole box clickable */
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Remove border from the last item */
+.nav-simple li:last-child a {
+    border-bottom: none;
+}
+
+/* Hover effect for .nav-simple */
+.nav-simple li a:hover {
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text */
+}
+
+
+/* --- NAVIGATION PATTERN 3: .nav-custom (Centered Flexbox with Borders) --- */
+.nav-custom ul {
+    display: flex;
+    justify-content: center; /* Center the nav items */
+    gap: 20px; /* Space between items */
+    list-style-type: none;
+    margin: 0;
+    padding: 1.5rem;
+    background-color: #e9ecef; /* Light Gray background */
+    border-top: 2px solid #007BFF;
+    border-bottom: 2px solid #007BFF;
+}
+
+.nav-custom li a {
+    text-decoration: none;
+    color: #007BFF;
+    padding: 8px 16px;
+    border: 1px solid #007BFF; /* Box around each link */
+    border-radius: 4px; /* Rounded corners */
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+/* Hover effect for .nav-custom */
+.nav-custom li a:hover {
+    background-color: #007BFF;
+    color: white;
+}
