@@ -1,0 +1,169 @@
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", serif;
+    line-height: 2;
+    background-color: #fafafa;
+    color: #1F2937;
+    padding: 32px 16px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1em;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: #6B7280;
+    margin-bottom: 32px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: normal;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+.button-section {
+    padding: 32px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.button-section p {
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+button {
+    font-family: "Times New Roman", serif;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+/* --- Provided Sample Buttons --- */
+.button-01 {
+    background-color: #0066CC;
+    color: #ffffff;
+    padding: 16px 32px;
+    border: 2px solid #0066CC;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.button-01:hover {
+    background-color: #ffffff;
+    color: #0066CC;
+    border-color: #0066CC;
+}
+
+.button-02 {
+    background-color: #0e6027;
+    color: #ffffff;
+    padding: 16px 32px;
+    border: 2px solid #0e6027;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-02:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* --- New Button Styles (Added by User) --- */
+
+/* Button Style 03: Scale Up */
+.button-03 {
+    background-color: #3498db;
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    /* Transition applied to the default state for smoothness */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-03:hover {
+    background-color: #2980b9; /* Change 1: Color */
+    transform: scale(1.1);   /* Change 2: Size */
+}
+
+/* Button Style 04: Shadow Lift */
+.button-04 {
+    background-color: #2ecc71;
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.button-04:hover {
+    background-color: #27ae60;           /* Change 1: Color */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Change 2: Shadow */
+    transform: translateY(-3px);           /* Change 3: Position */
+}
+
+/* Button Style 05: Border Grow */
+.button-05 {
+    background-color: transparent;
+    color: #e74c3c;
+    padding: 14px 30px;
+    border: 2px solid #e74c3c;
+    transition: background-color 0.4s ease, color 0.4s ease, padding 0.4s ease, border-width 0.4s ease;
+}
+
+.button-05:hover {
+    background-color: #e74c3c; /* Change 1: Background */
+    color: white;            /* Change 2: Text Color */
+    padding: 16px 34px;      /* Change 3: Padding (makes it look like it grows) */
+    border-width: 4px;       /* Change 4: Border thickness */
+}
+
+/* Button Style 06: Icon Reveal */
+.button-06 {
+    background-color: #9b59b6;
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    position: relative; /* Necessary for absolute positioning of the icon */
+    overflow: hidden;   /* Hides the icon when it's positioned off-screen */
+    transition: background-color 0.3s ease;
+}
+
+.button-06:hover {
+    background-color: #8e44ad; /* Change 1: Color */
+    padding-right: 50px;      /* Makes space for the icon */
+}
+
+.button-06::after {
+    content: "→"; /* The icon */
+    position: absolute;
+    right: -30px; /* Starts off-screen to the right */
+    top: 50%;
+    transform: translateY(-50%);
+    transition: right 0.3s ease;
+}
+
+.button-06:hover::after {
+    right: 20px; /* Change 2: Icon position slides in on hover */
+}
