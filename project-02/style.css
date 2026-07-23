@@ -1,0 +1,140 @@
+/* --- Global Styles & Dark Mode Palette --- */
+:root {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --accent-color: #bb86fc; /* Soft purple for links */
+    --card-bg: #1e1e1e;
+    --nav-bg: #2c2c2c;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--nav-bg);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+    /* Interactive Element 1: Hover Effect & Transition */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Main Content Area --- */
+main {
+    flex: 1;
+    padding: 3rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    margin-top: 2rem;
+    border-bottom: 2px solid var(--card-bg);
+    padding-bottom: 0.5rem;
+}
+
+/* --- Page Specific Styling --- */
+#hero-section, #about-section, #projects-section {
+    margin-bottom: 3rem;
+}
+
+/* Projects Grid (Flexbox) */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 300px; /* Cards stack on small screens by default */
+    box-sizing: border-box;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--accent-color);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--nav-bg);
+    color: #888;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+/* --- Responsive Design (Media Queries) --- */
+
+/* Tablet and up (min-width: 600px) */
+@media (min-width: 600px) {
+    nav ul {
+        justify-content: flex-end; /* Align right on larger screens */
+    }
+}
+
+/* Desktop and up (min-width: 992px) */
+@media (min-width: 992px) {
+    h1 {
+        font-size: 3rem;
+    }
+    .project-card {
+        width: calc(33.333% - 1.33rem); /* 3 cards per row on desktop */
+    }
+}
